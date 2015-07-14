@@ -93,6 +93,11 @@ cnoremap <C-e>  <C-e>
 cnoremap <C-u> <C-e><C-u>
 cnoremap <C-v> <C-f>a
 
+" http://qiita.com/muran001/items/3080c4816b7c2e65e40b
+" # 配置先のディレクトリを作成
+" $ mkdir -p ~/.vim/bundle
+" # NeoBundleをリポジトリから取得
+" $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif

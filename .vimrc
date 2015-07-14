@@ -3,7 +3,8 @@ syntax enable
 set number
 set ruler
 set list
-set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<,eol:<
+" set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<,eol:<
+set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 set incsearch
 set hlsearch
 set nowrap
@@ -53,7 +54,7 @@ vnoremap <expr> N <SID>search_forward_p() ? 'Nzv' : 'nzv'
 
 function! s:search_forward_p()
   return exists('v:searchforward') ? v:searchforward : 1
-  endfunction
+endfunction
 
 
 nnoremap <Space>o  :<C-u>for i in range(v:count1) \| call append(line('.'), '') \| endfor<CR>
@@ -86,10 +87,10 @@ nnoremap gs  :<C-u>%s///g<Left><Left><Left>
 vnoremap gs  :s///g<Left><Left><Left>
 
 
-cnoremap <C-f>  <Right>
-cnoremap <C-b>  <Left>
-cnoremap <C-a>  <C-b>
-cnoremap <C-e>  <C-e>
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+cnoremap <C-a> <C-b>
+cnoremap <C-e> <C-e>
 cnoremap <C-u> <C-e><C-u>
 cnoremap <C-v> <C-f>a
 
@@ -110,4 +111,19 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " add plugins
 NeoBundle 'altercation/vim-colors-solarized'
 
+" ファイルオープンを便利に
+NeoBundle 'Shougo/unite.vim'
+
+" Unite.vimで最近使ったファイルを表示できるようにする
+NeoBundle 'Shougo/neomru.vim'
+
+" add plugins
+NeoBundle 'altercation/vim-colors-solarized'
+
 call neobundle#end()
+
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
+
+filetype plugin on

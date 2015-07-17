@@ -224,3 +224,5 @@ function! s:GetHighlight(hi)
   return hl
 endfunction
 """"""""""""""""""""""""""""""
+
+set clipboard=unnamed,autoselect

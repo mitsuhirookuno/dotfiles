@@ -9,3 +9,6 @@
 
 * [ぼくのかんがえたさいしょうのvimrc](http://deris.hatenablog.jp/entry/2014/05/20/235807)
 * [Vim pluginへの入門](http://qiita.com/himinato/items/caf5a0b19ce893a75363)
+
+
+

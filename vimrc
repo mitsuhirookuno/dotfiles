@@ -226,3 +226,4 @@ endfunction
 """"""""""""""""""""""""""""""
 
 set clipboard=unnamed,autoselect
+nnoremap <silent><C-e> :NERDTreeToggle<CR>

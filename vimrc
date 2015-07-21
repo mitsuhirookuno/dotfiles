@@ -161,6 +161,16 @@ if has('lua')
     \ }
 endif
   
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+NeoBundle 'Shougo/vimshell.vim'
 
 call neobundle#end()
 
@@ -169,8 +179,6 @@ colorscheme solarized
 let g:solarized_termcolors=256
 
 filetype plugin on
-
-
 
 " http://inari.hatenablog.com/entry/2014/05/05/231307
 """"""""""""""""""""""""""""""

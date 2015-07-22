@@ -172,6 +172,9 @@ NeoBundle 'Shougo/vimproc.vim', {
 \ }
 NeoBundle 'Shougo/vimshell.vim'
 
+" ステータスライン表示をおしゃれに
+NeoBundle 'itchyny/lightline.vim'
+
 call neobundle#end()
 
 set background=dark

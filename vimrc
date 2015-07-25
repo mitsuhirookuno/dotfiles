@@ -175,6 +175,13 @@ NeoBundle 'Shougo/vimshell.vim'
 " ステータスライン表示をおしゃれに
 NeoBundle 'itchyny/lightline.vim'
 
+" コメントプラグイン
+NeoBundle 'scrooloose/nerdcommenter'
+" nerdcommenter用 cc でコメントorコメントアウト
+let NERDSpaceDelims = 1
+nmap cc NERDCommenterToggle
+vmap cc NERDCommenterToggle
+
 call neobundle#end()
 
 set background=dark

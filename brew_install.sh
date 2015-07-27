@@ -5,6 +5,7 @@ brew install ack
 brew install ag
 brew install tig
 brew install lv
+brew install macvim
 
 brew install caskroom/cask/brew-cask
 brew cask install google-chrome

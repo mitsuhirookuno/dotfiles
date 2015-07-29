@@ -7,6 +7,10 @@ brew install tig
 brew install lv
 brew install macvim
 
+brew install git
+brew install zsh
+brew install zsh-completions
+
 brew install caskroom/cask/brew-cask
 brew cask install google-chrome
 brew cask install firefox
@@ -23,3 +27,6 @@ brew cask install xtrafinder
 brew cask install sourcetree
 brew cask install alfred
 
+brew cask install google-japanese-ime
+brew cask install sequel-pro
+brew cask install heroku-toolbelt

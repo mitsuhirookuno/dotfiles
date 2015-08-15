@@ -27,10 +27,10 @@ nnoremap <Space>w  :<C-u>w<CR>
 nnoremap <Space>q  :<C-u>q<CR>
 nnoremap <Space>Q  :<C-u>q!<CR>
 
-nnoremap ;  :
-nnoremap :  ;
-vnoremap ;  :
-vnoremap :  ;
+" nnoremap ;  :
+" nnoremap :  ;
+" vnoremap ;  :
+" vnoremap :  ;
 
 nnoremap <Space>h  ^
 nnoremap <Space>l  $

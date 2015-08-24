@@ -30,6 +30,7 @@ brew cask install xtrafinder
 brew cask install sourcetree
 brew cask install alfred
 brew cask install gimp
+brew cask install licecap
 
 brew cask install google-japanese-ime
 brew cask install sequel-pro

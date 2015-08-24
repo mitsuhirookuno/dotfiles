@@ -34,3 +34,4 @@ brew cask install gimp
 brew cask install google-japanese-ime
 brew cask install sequel-pro
 brew cask install heroku-toolbelt
+brew cask install gyazo

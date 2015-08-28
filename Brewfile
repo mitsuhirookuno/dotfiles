@@ -36,3 +36,7 @@ brew cask install google-japanese-ime
 brew cask install sequel-pro
 brew cask install heroku-toolbelt
 brew cask install gyazo
+brew cask install evernote
+
+brew cask install sublime-text
+# sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl

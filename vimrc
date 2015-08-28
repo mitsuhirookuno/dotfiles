@@ -245,3 +245,9 @@ endfunction
 
 set clipboard=unnamed,autoselect
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" 隠しファイルをデフォルトで表示させる
+let NERDTreeShowHidden = 1
+
+" デフォルトでツリーを表示させる
+" autocmd VimEnter * execute 'NERDTree'

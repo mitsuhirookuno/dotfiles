@@ -6,13 +6,13 @@ brew install ag
 brew install tig
 brew install lv
 brew install macvim
-
 brew install node
 brew install npm
-
 brew install git
+# curl -L http://install.ohmyz.sh | sh
 brew install zsh
 brew install zsh-completions
+brew install coreutils
 
 brew install caskroom/cask/brew-cask
 brew cask install google-chrome
@@ -40,3 +40,8 @@ brew cask install evernote
 
 brew cask install sublime-text
 # sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+
+# brew cask install rubymine
+
+# brew tap sanemat/font
+# brew reinstall --powerline --vim-powerline ricty

@@ -13,8 +13,10 @@ eval "$(rbenv init -)"
 #----------------------------------------------------------------------
 autoload colors
 colors
+setopt prompt_subst
+. ${HOME}/dotfiles/git-prompt.sh
 #PROMPT="%{${fg[blue]}%}[%n@%m:%1~] %(!.#.$) %{${reset_color}%}"
-PROMPT="%1~ %(!.#.$) %{${reset_color}%}"
+PROMPT="%1~ %(!.#.$) %{${reset_color}%} "
 PROMPT2="%{${fg[blue]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
 RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
@@ -66,7 +68,7 @@ setopt share_history # share command history data
 #----------------------------------------------------------------------
 # Completion configuration
 #----------------------------------------------------------------------
-fpath=(${HOME}/.zsh/functions/Completion ${fpath})
+fpath=(${HOME}/dotfiles/zsh/functions/Completion ${fpath})
 autoload -U compinit
 compinit
 
@@ -118,3 +120,5 @@ PATH="/Applications/MacVim.app/Contents/MacOS:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+ZSH_THEME="steeef"

@@ -117,8 +117,6 @@ NeoBundle 'Shougo/unite.vim'
 " Unite.vimで最近使ったファイルを表示できるようにする
 NeoBundle 'Shougo/neomru.vim'
 
-" add plugins
-NeoBundle 'altercation/vim-colors-solarized'
 
 " ファイルをtree表示してくれる
 NeoBundle 'scrooloose/nerdtree'
@@ -184,6 +182,7 @@ vmap cc NERDCommenterToggle
 
 call neobundle#end()
 
+syntax enable
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors=256

@@ -43,5 +43,3 @@ brew cask install sublime-text
 
 # brew cask install rubymine
 
-# brew tap sanemat/font
-# brew reinstall --powerline --vim-powerline ricty

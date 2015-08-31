@@ -1,3 +1,5 @@
+[戻る](./README.md)
+
 # iTerm2
 
 ## terminal color 
@@ -12,24 +14,29 @@
 - https://github.com/yascentur/Ricty
 - power-line
 
+### powerline
+
 ```
 brew tap sanemat/font
 brew reinstall --powerline --vim-powerline ricty
 ```
 
+※`fc-cache -vf` フォントのキャッスクリア
+
 # zsh
 
 ## oh-my-zsh
 
-`curl -L http://install.ohmyz.sh | sh`
+```
+curl -L http://install.ohmyz.sh | sh
+```
 
 - http://befool.co.jp/blog/jiska/use-zsh-with-oh-my-zsh/
+ - テーマは `ZSH_THEME="wedisagree"` を暫定利用中
 
-# powerline
-// fontpacherを使うためvim-powerlineをおとす
-git clone https://github.com/Lokaltog/vim-powerline.git
+### zshの不調時
 
-brew update
-brew install fontforge
-fontforge -script vim-powerline/fontpatcher/fontpatcher ~/Library/Fonts/Ricty-Regular.ttf
-cp *-Powerline.ttf  ~/Library/Fonts/
+```
+rm ~/.zcompdump
+exec zsh
+```

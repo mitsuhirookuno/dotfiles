@@ -39,6 +39,8 @@ brew cask install gyazo
 brew cask install evernote
 
 brew cask install sublime-text
+brew cask install mi
+brew cask install sqlitebrowser
 # sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
 # brew cask install rubymine

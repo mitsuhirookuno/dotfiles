@@ -37,6 +37,7 @@ brew cask install sequel-pro
 brew cask install heroku-toolbelt
 brew cask install gyazo
 brew cask install evernote
+brew cask install slack
 
 brew cask install sublime-text
 brew cask install mi

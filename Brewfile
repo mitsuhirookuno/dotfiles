@@ -5,6 +5,7 @@ brew install ack
 brew install ag
 brew install tig
 brew install lv
+brew install wget
 brew install macvim
 brew install node
 brew install npm
@@ -44,5 +45,6 @@ brew cask install mi
 brew cask install sqlitebrowser
 # sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
+# brew cask install java
 # brew cask install rubymine
 

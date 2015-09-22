@@ -29,6 +29,7 @@ brew cask install libreoffice
 brew cask install xtrafinder
 brew cask install sourcetree
 brew cask install alfred
+brew cask install bettertouchtool
 brew cask install gimp
 brew cask install licecap
 

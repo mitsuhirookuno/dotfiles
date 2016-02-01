@@ -12,8 +12,10 @@ export PATH
 
 HISTSIZE=9999
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 eval $(gdircolors ~/.dircolors-solarized)
 
 alias ls='gls --color=auto'
 
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"

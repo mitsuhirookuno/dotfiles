@@ -15,7 +15,9 @@ brew install zsh
 brew install zsh-completions
 brew install coreutils
 
-brew install caskroom/cask/brew-cask
+# http://rcmdnk.github.io/blog/2015/12/18/computer-homebrew-brew-file-mac/
+# brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 brew cask install google-chrome
 # brew cask install firefox
 # brew cask install virtualbox

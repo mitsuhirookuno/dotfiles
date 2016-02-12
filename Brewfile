@@ -29,7 +29,7 @@ brew cask install kobito
 # brew cask install libreoffice
 # https://ja.libreoffice.org/download/libreoffice-fresh/
 # 日本語化
-brew cask install xtrafinder
+# brew cask install xtrafinder
 # brew cask install sourcetree
 brew cask install alfred
 brew cask install bettertouchtool

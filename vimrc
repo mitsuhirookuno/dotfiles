@@ -94,93 +94,138 @@ cnoremap <C-e> <C-e>
 cnoremap <C-u> <C-e><C-u>
 cnoremap <C-v> <C-f>a
 
-" http://qiita.com/muran001/items/3080c4816b7c2e65e40b
-" # 配置先のディレクトリを作成
-" $ mkdir -p ~/.vim/bundle
-" # NeoBundleをリポジトリから取得
-" $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+" ### https://github.com/Shougo/dein.vim ###
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+" Required:
+set runtimepath^=.vim/dein/repos/github.com/Shougo/dein.vim
 
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
+" Required:
+call dein#begin(expand('.vim/dein'))
 
-" add plugins
-NeoBundle 'altercation/vim-colors-solarized'
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
+
+" Add or remove your plugins here:
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+
+
+call dein#add('altercation/vim-colors-solarized')
 
 " ファイルオープンを便利に
-NeoBundle 'Shougo/unite.vim'
+call dein#add('Shougo/unite.vim')
 
-" Unite.vimで最近使ったファイルを表示できるようにする
-NeoBundle 'Shougo/neomru.vim'
+"" Unite.vimで最近使ったファイルを表示できるようにする
+call dein#add('Shougo/neomru.vim')
 
+call dein#add('scrooloose/nerdtree')
 
-" ファイルをtree表示してくれる
-NeoBundle 'scrooloose/nerdtree'
+" You can specify revision/branch/tag.
+call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
-" Rails向けのコマンドを提供する
-NeoBundle 'tpope/vim-rails'
+" Required:
+call dein#end()
 
+" Required:
+filetype plugin indent on
 
-" インデントに色を付けて見やすくする
-NeoBundle 'nathanaelkane/vim-indent-guides'
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
 
-" vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
-let g:indent_guides_enable_on_vim_startup = 1
+"End dein Scripts-------------------------
 
-" ログファイルを色づけしてくれる
-NeoBundle 'vim-scripts/AnsiEsc.vim'
-
-" 行末の半角スペースを可視化
-NeoBundle 'bronson/vim-trailing-whitespace'
-
-" vimのデフォルトシンタックスでは不満がある人向け
-NeoBundle 'rcmdnk/vim-markdown'
-" vim-markdown {{{
-let g:vim_markdown_folding_disabled = 1
-" }}}
-
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-  \     'windows' : 'make -f make_mingw32.mak',
-  \     'cygwin' : 'make -f make_cygwin.mak',
-  \     'mac' : 'make -f make_mac.mak',
-  \     'unix' : 'make -f make_unix.mak',
-  \    },
-  \ }
-
-if has('lua')
-  NeoBundleLazy 'Shougo/neocomplete.vim', {
-    \ 'depends' : 'Shougo/vimproc',
-    \ 'autoload' : { 'insert' : 1,}
-    \ }
-endif
-  
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-NeoBundle 'Shougo/vimshell.vim'
-
-" ステータスライン表示をおしゃれに
-NeoBundle 'itchyny/lightline.vim'
-
-" コメントプラグイン
-NeoBundle 'scrooloose/nerdcommenter'
-" nerdcommenter用 cc でコメントorコメントアウト
-let NERDSpaceDelims = 1
-nmap cc NERDCommenterToggle
-vmap cc NERDCommenterToggle
-
-call neobundle#end()
+"" http://qiita.com/muran001/items/3080c4816b7c2e65e40b
+"" # 配置先のディレクトリを作成
+"" $ mkdir -p ~/.vim/bundle
+"" # NeoBundleをリポジトリから取得
+"" $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+"if has('vim_starting')
+"  set runtimepath+=~/.vim/bundle/neobundle.vim/
+"endif
+"
+"call neobundle#begin(expand('~/.vim/bundle/'))
+"
+"" Let NeoBundle manage NeoBundle
+"NeoBundleFetch 'Shougo/neobundle.vim'
+"
+"" add plugins
+"NeoBundle 'altercation/vim-colors-solarized'
+"
+"" ファイルオープンを便利に
+"NeoBundle 'Shougo/unite.vim'
+"
+"" Unite.vimで最近使ったファイルを表示できるようにする
+"NeoBundle 'Shougo/neomru.vim'
+"
+"" ファイルをtree表示してくれる
+"NeoBundle 'scrooloose/nerdtree'
+"
+"" Rails向けのコマンドを提供する
+"NeoBundle 'tpope/vim-rails'
+"
+"" インデントに色を付けて見やすくする
+"NeoBundle 'nathanaelkane/vim-indent-guides'
+"
+"" vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
+"let g:indent_guides_enable_on_vim_startup = 1
+"
+"" ログファイルを色づけしてくれる
+"NeoBundle 'vim-scripts/AnsiEsc.vim'
+"
+"" 行末の半角スペースを可視化
+"NeoBundle 'bronson/vim-trailing-whitespace'
+"
+"" vimのデフォルトシンタックスでは不満がある人向け
+"NeoBundle 'rcmdnk/vim-markdown'
+"" vim-markdown {{{
+"let g:vim_markdown_folding_disabled = 1
+"" }}}
+"
+"NeoBundle 'Shougo/vimproc', {
+"  \ 'build' : {
+"  \     'windows' : 'make -f make_mingw32.mak',
+"  \     'cygwin' : 'make -f make_cygwin.mak',
+"  \     'mac' : 'make -f make_mac.mak',
+"  \     'unix' : 'make -f make_unix.mak',
+"  \    },
+"  \ }
+"
+"if has('lua')
+"  NeoBundleLazy 'Shougo/neocomplete.vim', {
+"    \ 'depends' : 'Shougo/vimproc',
+"    \ 'autoload' : { 'insert' : 1,}
+"    \ }
+"endif
+"  
+"NeoBundle 'Shougo/vimproc.vim', {
+"\ 'build' : {
+"\     'windows' : 'tools\\update-dll-mingw',
+"\     'cygwin' : 'make -f make_cygwin.mak',
+"\     'mac' : 'make -f make_mac.mak',
+"\     'linux' : 'make',
+"\     'unix' : 'gmake',
+"\    },
+"\ }
+"NeoBundle 'Shougo/vimshell.vim'
+"
+"" ステータスライン表示をおしゃれに
+"NeoBundle 'itchyny/lightline.vim'
+"
+"" コメントプラグイン
+"NeoBundle 'scrooloose/nerdcommenter'
+"" nerdcommenter用 cc でコメントorコメントアウト
+"let NERDSpaceDelims = 1
+"nmap cc NERDCommenterToggle
+"vmap cc NERDCommenterToggle
+"
+"call neobundle#end()
 
 syntax enable
 set background=dark

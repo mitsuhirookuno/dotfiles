@@ -7,6 +7,7 @@ brew install tig
 brew install lv
 brew install wget
 brew install macvim
+brew install neovim/neovim/neovim
 brew install node
 brew install npm
 brew install git
@@ -37,16 +38,16 @@ brew cask install bettertouchtool
 #brew cask install licecap
 
 brew cask install google-japanese-ime
-brew cask install sequel-pro
+#brew cask install sequel-pro
 #brew cask install heroku-toolbelt
 #brew cask install gyazo
 #brew cask install evernote
 #brew cask install slack
 
 # brew cask install sublime-text
-#brew cask install mi
-#brew cask install atom
-#brew cask install sqlitebrowser
+# brew cask install mi
+# brew cask install atom
+# brew cask install sqlitebrowser
 # sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
 # brew cask install java

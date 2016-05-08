@@ -4,10 +4,6 @@
 # node.js
 export NODE_PATH="/usr/local/lib/node_modules"
 
-#
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 #----------------------------------------------------------------------
 # Prompt color
 #----------------------------------------------------------------------
@@ -122,3 +118,5 @@ PATH="/Applications/MacVim.app/Contents/MacOS:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ZSH_THEME="steeef"
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"

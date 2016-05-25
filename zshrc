@@ -15,7 +15,7 @@ setopt prompt_subst
 PROMPT="%1~ %(!.#.$) %{${reset_color}%} "
 PROMPT2="%{${fg[blue]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
-RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
+RPROMPT="%{${fg[yellow]}%}[%~]%{${reset_color}%}"
 
 #----------------------------------------------------------------------
 # general
@@ -117,6 +117,23 @@ PATH="/Applications/MacVim.app/Contents/MacOS:$PATH"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+### neovim
+# http://giginet.hateblo.jp/entry/2015/11/24/203823
+export XDG_CONFIG_HOME=~/.config
+
 ZSH_THEME="steeef"
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+
+
+# http://tkengo.github.io/blog/2013/05/12/zsh-vcs-info/
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u(%b)%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+RPROMPT=$RPROMPT'${vcs_info_msg_0_}'

@@ -40,3 +40,5 @@ curl -L http://install.ohmyz.sh | sh
 rm ~/.zcompdump
 exec zsh
 ```
+
+hogehoge

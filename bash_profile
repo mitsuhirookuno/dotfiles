@@ -15,6 +15,7 @@ HISTSIZE=9999
 eval $(gdircolors ~/.dircolors-solarized)
 
 alias ls='gls --color=auto'
+alias dc='docker-compose'
 
 export CC=/usr/bin/gcc
 

@@ -131,6 +131,10 @@ call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 " lightline.vim
 call dein#add('itchyny/lightline.vim')
 
+" fzf
+call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+
 " Required:
 call dein#end()
 

@@ -128,6 +128,13 @@ call dein#add('scrooloose/nerdtree')
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
+" lightline.vim
+call dein#add('itchyny/lightline.vim')
+
+" fzf
+call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+
 " Required:
 call dein#end()
 
@@ -296,3 +303,13 @@ let NERDTreeShowHidden = 1
 
 " デフォルトでツリーを表示させる
 " autocmd VimEnter * execute 'NERDTree'
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+set laststatus=2
+
+let g:lightline = {
+      \ 'colorscheme': 'solarized'
+      \ }

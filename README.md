@@ -14,4 +14,4 @@
 
 [追加メモ](./memo.md)
 
-gpg test
+gpg test abc
